@@ -1,183 +1,174 @@
 # Energy Consumption Forecasting for Smart Buildings
 
-🚀 A comprehensive web application for predicting and analyzing building energy consumption using advanced machine learning models and AI-powered insights.
+A comprehensive web application for predicting and analyzing building energy consumption using advanced machine learning models and AI-powered insights.
 
 ![Energy Forecast Pro](https://img.shields.io/badge/Status-Production%20Ready-green)
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![React](https://img.shields.io/badge/React-19.0+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-green)
 
-## 🌟 Live Demo
 
-**Production URL**: [https://building-forecast.preview.emergentagent.com](https://building-forecast.preview.emergentagent.com)
+# Table of Contents
 
-## 📋 Table of Contents
+* [Features](#features)
+* [Technology Stack](#technology-stack)
+* [Local Development Setup](#local-development-setup)
+* [API Documentation](#api-documentation)
+* [Architecture](#architecture)
+* [Screenshots](#screenshots)
+* [Contributing](#contributing)
+* [License](#license)
 
-- [Features](#features)
-- [Technology Stack](#technology-stack)
-- [Local Development Setup](#local-development-setup)
-- [API Documentation](#api-documentation)
-- [Architecture](#architecture)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
+# Features
 
-## ✨ Features
+## Smart Building Analytics
 
-### 🏢 Smart Building Analytics
-- **Multi-Building Support**: Office, residential, retail, industrial, hospital, and school buildings
-- **Real-time Data Simulation**: Realistic energy consumption patterns with weather correlations
-- **Historical Analysis**: 90 days of hourly energy consumption data
+* Multi-Building Support: Office, residential, retail, industrial, hospital, and school buildings
+* Real-time Data Simulation: Realistic energy consumption patterns with weather correlations
+* Historical Analysis: 90 days of hourly energy consumption data
 
-### 🤖 Advanced Machine Learning
-- **Multiple ML Models**: Linear Regression, Random Forest, Support Vector Regression
-- **Feature Engineering**: Cyclical time features, lag variables, rolling averages
-- **Model Comparison**: Side-by-side performance analysis with R² scores up to 82.8%
-- **Performance Metrics**: MAE, RMSE, R² score evaluation
+## Advanced Machine Learning
 
-### 🧠 AI-Powered Insights
-- **OpenAI GPT-4o Integration**: Intelligent energy consumption analysis
-- **Actionable Recommendations**: AI-generated optimization strategies
-- **Contextual Analysis**: Building-type specific insights and suggestions
+* Multiple ML Models: Linear Regression, Random Forest, Support Vector Regression
+* Feature Engineering: Cyclical time features, lag variables, rolling averages
+* Model Comparison: Side-by-side performance analysis with R² scores up to 82.8%
+* Performance Metrics: MAE, RMSE, R² score evaluation
 
-### 📊 Interactive Dashboard
-- **4-Tab Interface**: Overview, Forecast, Model Comparison, AI Insights
-- **Real-time Charts**: Interactive time-series visualization with Recharts
-- **Professional UI**: Modern design with gradients and glass-morphism effects
-- **Responsive Design**: Works seamlessly across different screen sizes
+## AI-Powered Insights
 
-### 🔮 Forecasting Capabilities
-- **Configurable Forecasts**: 3, 7, 14, or 30-day predictions
-- **Multiple Models**: Choose from different ML algorithms
-- **Visual Results**: Interactive charts showing predicted vs actual consumption
-- **Export Ready**: Data formatted for further analysis
+* OpenAI GPT-4o Integration: Intelligent energy consumption analysis
+* Actionable Recommendations: AI-generated optimization strategies
+* Contextual Analysis: Building-type specific insights and suggestions
 
-## 🛠 Technology Stack
+## Interactive Dashboard
 
-### Backend
-- **FastAPI** - Modern, fast web framework for building APIs
-- **Python 3.11+** - Core programming language
-- **scikit-learn** - Machine learning library
-- **pandas & numpy** - Data manipulation and analysis
-- **MongoDB** - NoSQL database for storing forecasts
-- **emergentintegrations** - LLM integration library
+* 4-Tab Interface: Overview, Forecast, Model Comparison, AI Insights
+* Real-time Charts: Interactive time-series visualization with Recharts
+* Professional UI: Modern design with gradients and glass-morphism effects
+* Responsive Design: Works seamlessly across different screen sizes
 
-### Frontend
-- **React 19** - Modern frontend framework
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **shadcn/ui** - Beautiful, accessible component library
-- **Recharts** - Composable charting library
-- **React Router** - Client-side routing
+## Forecasting Capabilities
 
-### DevOps & Deployment
-- **Docker** - Containerization
-- **Kubernetes** - Container orchestration
-- **GitHub Actions** - CI/CD pipeline
-- **MongoDB Atlas** - Cloud database (production)
+* Configurable Forecasts: 3, 7, 14, or 30-day predictions
+* Multiple Models: Choose from different ML algorithms
+* Visual Results: Interactive charts showing predicted vs actual consumption
+* Export Ready: Data formatted for further analysis
 
-## 🚀 Local Development Setup
+# Technology Stack
 
-### Prerequisites
+## Backend
 
-- **Node.js** 18+ and **yarn**
-- **Python** 3.11+
-- **MongoDB** (local or cloud)
-- **Git**
+* FastAPI - Modern, fast web framework for building APIs
+* Python 3.11+ - Core programming language
+* scikit-learn - Machine learning library
+* pandas & numpy - Data manipulation and analysis
+* MongoDB - NoSQL database for storing forecasts
+* emergentintegrations - LLM integration library
 
-### 1. Clone the Repository
+## Frontend
+
+* React 19 - Modern frontend framework
+* TypeScript - Type-safe JavaScript
+* Tailwind CSS - Utility-first CSS framework
+* shadcn/ui - Beautiful, accessible component library
+* Recharts - Composable charting library
+* React Router - Client-side routing
+
+## DevOps & Deployment
+
+* Docker - Containerization
+* Kubernetes - Container orchestration
+* GitHub Actions - CI/CD pipeline
+* MongoDB Atlas - Cloud database (production)
+
+# Local Development Setup
+
+## Prerequisites
+
+* Node.js 18+ and yarn
+* Python 3.11+
+* MongoDB (local or cloud)
+* Git
+
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/yourusername/energy-forecast-pro.git
 cd energy-forecast-pro
 ```
 
-### 2. Backend Setup
+## 2. Backend Setup
 
 ```bash
-# Navigate to backend directory
 cd backend
-
-# Create virtual environment
 python -m venv venv
-
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
-# Install dependencies
+venv\Scripts\activate   # Windows
+source venv/bin/activate  # macOS/Linux
 pip install -r requirements.txt
-
-# Set up environment variables
 cp .env.example .env
-# Edit .env with your configuration
 ```
 
-### 3. Frontend Setup
+## 3. Frontend Setup
 
 ```bash
-# Navigate to frontend directory
 cd ../frontend
-
-# Install dependencies
 yarn install
-
-# Set up environment variables
 cp .env.example .env
-# Edit .env with your configuration
 ```
 
-### 4. Database Setup
+## 4. Database Setup
 
 ```bash
 # Install MongoDB locally or use MongoDB Atlas
 # Update MONGO_URL in backend/.env
 ```
 
-### 5. Run the Application
+## 5. Run the Application
 
-#### Backend (Terminal 1)
+### Backend (Terminal 1)
+
 ```bash
 cd backend
 python -m uvicorn server:app --reload --host 0.0.0.0 --port 8001
 ```
 
-#### Frontend (Terminal 2)
+### Frontend (Terminal 2)
+
 ```bash
 cd frontend
 yarn start
 ```
 
-### 6. Access the Application
+## 6. Access the Application
 
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:8001
-- **API Documentation**: http://localhost:8001/docs
+* Frontend: [http://localhost:3000](http://localhost:3000)
+* Backend API: [http://localhost:8001](http://localhost:8001)
+* API Documentation: [http://localhost:8001/docs](http://localhost:8001/docs)
 
-## 📚 API Documentation
+# API Documentation
 
-### Core Endpoints
+## Core Endpoints
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/` | Health check |
-| GET | `/api/buildings` | Get list of buildings |
-| GET | `/api/buildings/{id}/data` | Get historical energy data |
-| POST | `/api/forecast` | Generate energy forecast |
-| GET | `/api/models/compare/{id}` | Compare ML models |
-| POST | `/api/ai-insights` | Generate AI insights |
-| GET | `/api/forecasts/{id}` | Get stored forecasts |
+| Method | Endpoint                   | Description                |
+| ------ | -------------------------- | -------------------------- |
+| GET    | `/api/`                    | Health check               |
+| GET    | `/api/buildings`           | Get list of buildings      |
+| GET    | `/api/buildings/{id}/data` | Get historical energy data |
+| POST   | `/api/forecast`            | Generate energy forecast   |
+| GET    | `/api/models/compare/{id}` | Compare ML models          |
+| POST   | `/api/ai-insights`         | Generate AI insights       |
+| GET    | `/api/forecasts/{id}`      | Get stored forecasts       |
 
-### Example API Calls
+## Example API Calls
 
-#### Get Buildings
+### Get Buildings
+
 ```bash
 curl -X GET "http://localhost:8001/api/buildings"
 ```
 
-#### Generate Forecast
+### Generate Forecast
+
 ```bash
 curl -X POST "http://localhost:8001/api/forecast" \
   -H "Content-Type: application/json" \
@@ -188,7 +179,8 @@ curl -X POST "http://localhost:8001/api/forecast" \
   }'
 ```
 
-#### Generate AI Insights
+### Generate AI Insights
+
 ```bash
 curl -X POST "http://localhost:8001/api/ai-insights" \
   -H "Content-Type: application/json" \
@@ -202,111 +194,106 @@ curl -X POST "http://localhost:8001/api/ai-insights" \
   }'
 ```
 
-## 🏗 Architecture
+# Architecture
 
-### System Architecture
+## System Architecture
+
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   React App     │    │   FastAPI       │    │   MongoDB       │
-│   (Frontend)    │◄──►│   (Backend)     │◄──►│   (Database)    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         │                       ▼                       │
-         │              ┌─────────────────┐              │
-         │              │   scikit-learn  │              │
-         │              │   (ML Models)   │              │
-         │              └─────────────────┘              │
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Recharts      │    │   OpenAI GPT-4o │    │   Forecasts     │
-│   (Visualization)│    │   (AI Insights) │    │   (Storage)     │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+React App (Frontend) <--> FastAPI (Backend) <--> MongoDB (Database)
+         |                       |                       |
+         |                       v                       |
+         |              scikit-learn (ML Models)         |
+         |                       |                       |
+         v                       v                       v
+Recharts (Visualization)   OpenAI GPT-4o (AI Insights)   Forecasts (Storage)
 ```
 
-### Data Flow
-1. **Data Generation**: Mock API creates realistic building energy patterns
-2. **Feature Engineering**: Time-based features, lag variables, rolling averages
-3. **Model Training**: Multiple ML algorithms trained on historical data
-4. **Forecasting**: Generate predictions for specified time periods
-5. **AI Analysis**: GPT-4o analyzes patterns and provides recommendations
-6. **Visualization**: Interactive charts display results and insights
+## Data Flow
 
-## 🎯 Key Features Explained
+1. Data Generation: Mock API creates realistic building energy patterns
+2. Feature Engineering: Time-based features, lag variables, rolling averages
+3. Model Training: Multiple ML algorithms trained on historical data
+4. Forecasting: Generate predictions for specified time periods
+5. AI Analysis: GPT-4o analyzes patterns and provides recommendations
+6. Visualization: Interactive charts display results and insights
 
-### Machine Learning Models
+# Key Features Explained
 
-#### 1. Linear Regression
-- **Use Case**: Fast baseline predictions
-- **Performance**: R² scores around 43.5%
-- **Best For**: Simple trend analysis
+## Machine Learning Models
 
-#### 2. Random Forest
-- **Use Case**: Robust ensemble predictions
-- **Performance**: R² scores up to 82.8%
-- **Best For**: Complex pattern recognition
+### Linear Regression
 
-#### 3. Support Vector Regression (SVR)
-- **Use Case**: Non-linear pattern modeling
-- **Performance**: R² scores around 18-35%
-- **Best For**: Complex relationships
+* Use Case: Fast baseline predictions
+* Performance: R² scores around 43.5%
+* Best For: Simple trend analysis
 
-### Feature Engineering
+### Random Forest
 
-- **Cyclical Features**: Hour and day-of-week sine/cosine encoding
-- **Lag Features**: Previous consumption values (1h, 24h, 168h)
-- **Rolling Averages**: 24-hour and weekly moving averages
-- **Weather Integration**: Temperature and humidity correlations
+* Use Case: Robust ensemble predictions
+* Performance: R² scores up to 82.8%
+* Best For: Complex pattern recognition
 
-### AI Insights
+### Support Vector Regression (SVR)
+
+* Use Case: Non-linear pattern modeling
+* Performance: R² scores around 18-35%
+* Best For: Complex relationships
+
+## Feature Engineering
+
+* Cyclical Features: Hour and day-of-week sine/cosine encoding
+* Lag Features: Previous consumption values (1h, 24h, 168h)
+* Rolling Averages: 24-hour and weekly moving averages
+* Weather Integration: Temperature and humidity correlations
+
+## AI Insights
 
 The AI system analyzes:
-- Energy consumption patterns
-- Building-specific characteristics
-- Seasonal variations
-- Optimization opportunities
-- Cost-saving recommendations
 
-## 📸 Screenshots
+* Energy consumption patterns
+* Building-specific characteristics
+* Seasonal variations
+* Optimization opportunities
+* Cost-saving recommendations
 
-### Dashboard Overview
-![Dashboard](docs/images/dashboard-overview.png)
+# Screenshots
 
-### Forecast Generation
-![Forecast](docs/images/forecast-generation.png)
+* Dashboard Overview
+* Forecast Generation
+* Model Comparison
+* AI Insights
 
-### Model Comparison
-![Models](docs/images/model-comparison.png)
-
-### AI Insights
-![AI Insights](docs/images/ai-insights.png)
-
-## 🤝 Contributing
+# Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-### Development Process
+## Development Process
+
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+# License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+# Acknowledgments
 
-- **OpenAI** for GPT-4o integration
-- **scikit-learn** for machine learning capabilities
-- **React community** for excellent frontend tools
-- **FastAPI** for the amazing backend framework
+* OpenAI for GPT-4o integration
+* scikit-learn for machine learning capabilities
+* React community for excellent frontend tools
+* FastAPI for the backend framework
 
-## 📞 Support
+# Support
 
 For support, please open an issue on GitHub or contact the development team.
 
 ---
 
-**Built with ❤️ for smart building energy management**
+**Built for smart building energy management**
+
+---
+
+Do you want me to also **shorten this into a polished GitHub README** format (removing redundancy) so it’s recruiter-friendly?
